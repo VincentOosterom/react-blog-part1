@@ -9,7 +9,7 @@ import BlogDetailPage from "./pages/BlogDetailPage/BlogDetailPage.jsx";
 function App() {
     return (
             <Routes>
-                <Route path="/homepage" element={<Homepage/>}></Route>
+                <Route path="/" element={<Homepage/>}></Route>
                 <Route path="/blog-overview" element={<BlogOverviewPage/>}></Route>
                 <Route path="/new-post" element={<NewPostPage/>}></Route>
                 <Route path="/blog/:id" element={<BlogDetailPage/>}></Route>

@@ -1,0 +1,45 @@
+body{
+    background-color: #ececec;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-inputs input {
+    padding: 15px;
+    width: 500px;
+    border: none;
+}
+
+.button-form{
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    width: 100%;
+    padding: 16px;
+    margin-top: 1rem;
+    border: none;
+}
+
+.form-inputs textarea{
+    border: none;
+}
+
+.error-message{
+    color: indianred;
+    text-align: center;
+
+}
+
+

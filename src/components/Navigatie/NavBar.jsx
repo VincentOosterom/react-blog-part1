@@ -11,7 +11,7 @@ function NavBar() {
                 <h3>BIOgventure</h3>
             </div>
             <ul className="navbar-links">
-                <li><NavLink to="/homepage" className={({isActive}) => isActive ? "active" : "default"}>Home</NavLink></li>
+                <li><NavLink to="/" className={({isActive}) => isActive ? "active" : "default"}>Home</NavLink></li>
                 <li><NavLink to="/blog-overview" className={({isActive}) => isActive ? "active" : "default"}>Alle posts</NavLink></li>
                 <li><NavLink to="/new-post" className={({isActive}) => isActive ? "active" : "default"}>Nieuwe post maken</NavLink></li>
             </ul>
