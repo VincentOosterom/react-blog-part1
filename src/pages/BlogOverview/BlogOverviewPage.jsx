@@ -66,7 +66,7 @@ function BlogOverviewPage() {
     return (
         <>
             <NavBar/>
-            <header>
+            <header className="header-blog-overview">
                 <div className="blog-overview-title">
                     <h1>Bekijk alle {totalPosts} posts op het platform</h1>
                 </div>
