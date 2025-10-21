@@ -1,6 +1,6 @@
 import './BlogDetailPage.css'
 import {Link, useParams} from "react-router-dom";
-import posts from "../../constants/data.json";
+import posts from "../../../public/data.json";
 import NavBar from "../../components/Navigatie/NavBar.jsx";
 import {formatDate} from "../../helpers/formatDate.js"
 
