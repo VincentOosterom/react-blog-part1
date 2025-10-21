@@ -4,3 +4,27 @@
     align-items: center;
     margin-top: 85px;
 }
+
+.delete-button{
+    background-color: #38E991;
+    border: none;
+    max-width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.delete-button:hover{
+    background-color: white;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.blog-detail a{
+    text-decoration: none;
+    color: black;
+}
+
+.blog-detail a:hover{
+    text-decoration: underline;
+}

@@ -3,6 +3,7 @@ import NavBar from "../../components/Navigatie/NavBar.jsx";
 import {Link} from "react-router-dom";
 import {useState, useEffect} from "react";
 import {countPosts} from "../../helpers/countPost.js";
+import axios from "axios";
 
 
 function BlogOverviewPage() {
@@ -14,18 +15,24 @@ function BlogOverviewPage() {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const response = await fetch("/data.json");
-                if (!response.ok) {
-                    throw new Error("Er is een fout opgetreden bij het ophalen van de posts.");
-                }
+                const response = await axios.get(
+                    "https://novi-backend-api-wgsgz.ondigitalocean.app/api/blogposts",
+                    {
+                        headers: {
+                            "Content-Type": "application/json",
+                            "novi-education-project-id": "d6200c4d-2a0a-435d-aba6-6171c6a7296e",
+                        },
+                    }
+                );
 
-                const data = await response.json();
+                // Axios zet JSON automatisch om naar JavaScript-object:
+                const data = response.data;
                 console.log("Data opgehaald:", data);
 
-                // Controleer of je data een array is of een object met posts erin
+                // Zet de data in de state
                 setPosts(Array.isArray(data) ? data : data.posts);
             } catch (error) {
-                console.error(error);
+                console.error("Fout bij ophalen:", error);
                 setError("Er is een fout opgetreden bij het ophalen van de posts.");
             } finally {
                 setLoading(false);
