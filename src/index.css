@@ -7,6 +7,12 @@
   --color-white: #FFFFFF;
 }
 
+/*Dan kan ik rem gebruiken*/
+html{
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
 * {
   margin: 0;
   padding: 0;
